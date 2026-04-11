@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog de filosofía y ética para estudiantes de grado 10° y 11° en Colombia. Artículos, talleres y recursos para pensar mejor.">
+  <meta name="theme-color" content="#1a1a2e">
+  <title>Inicio | Filosofía y Locura</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      Para estudiantes de <strong>grado 10° y 11°</strong> &nbsp;·&nbsp; Colombia
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="masthead" role="banner">
+    <div class="masthead__inner container">
+      <a href="index.html" class="masthead__brand" aria-label="Inicio – Filosofía y Locura">
+        <span class="masthead__logo">Filosofía <span>&</span> Locura</span>
+        <span class="masthead__tagline">Blog de ética y pensamiento crítico</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__list" role="list">
+          <li><a href="index.html"      class="nav__link active">Inicio</a></li>
+          <li><a href="etica.html"      class="nav__link">Ética</a></li>
+          <li><a href="filosofia.html"  class="nav__link">Filosofía</a></li>
+          <li><a href="talleres.html"   class="nav__link">Talleres</a></li>
+          <li><a href="recursos.html"   class="nav__link">Recursos</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Menú móvil -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <ul class="mobile-nav__list" role="list">
+        <li><a href="index.html"     class="mobile-nav__link">🏠 Inicio</a></li>
+        <li><a href="etica.html"     class="mobile-nav__link">⚖️ Ética</a></li>
+        <li><a href="filosofia.html" class="mobile-nav__link">🧠 Filosofía</a></li>
+        <li><a href="talleres.html"  class="mobile-nav__link">✏️ Talleres</a></li>
+        <li><a href="recursos.html"  class="mobile-nav__link">📚 Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <p class="hero__kicker">✦ Bienvenido al blog</p>
+      <h1 class="hero__title" id="heroTitle">
+        Filosofía para <em>la vida real</em>
+      </h1>
+      <p class="hero__desc">
+        Aprende ética y filosofía de manera sencilla, con ejemplos del día a día y
+        actividades que te hacen pensar. Ideal para grado 10° y 11°.
+      </p>
+      <div class="hero__actions">
+        <a href="filosofia.html" class="btn btn--primary">Explorar Filosofía</a>
+        <a href="talleres.html"  class="btn btn--outline">Ver Talleres</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="container">
+      <div class="main-layout">
+
+        <!-- ── CONTENT COLUMN ── -->
+        <div>
+
+          <!-- Artículo destacado -->
+          <section aria-labelledby="featuredTitle">
+            <div class="section-header">
+              <h2 class="section-header__title" id="featuredTitle">
+                <span class="section-header__line"></span>Artículo Destacado
+              </h2>
+            </div>
+            <a href="posts/el-dilema-del-prisionero.html" class="featured-post" aria-label="Artículo destacado: El Dilema del Prisionero">
+              <div class="featured-post__image" data-symbol="⚖">
+                <span class="featured-post__badge">⭐ Destacado</span>
+              </div>
+              <div class="featured-post__body">
+                <div class="featured-post__meta">
+                  <span class="tag tag--etica">Ética</span>
+                  <span class="featured-post__date">15 de mayo, 2025</span>
+                </div>
+                <h3 class="featured-post__title">
+                  El Dilema del Prisionero: ¿Es mejor cooperar o traicionar?
+                </h3>
+                <p class="featured-post__excerpt">
+                  Un experimento mental famoso que nos muestra cómo las decisiones
+                  individuales pueden afectar a toda la sociedad. ¿Qué harías tú
+                  si tu libertad dependiera de confiar en un desconocido?
+                </p>
+                <span class="featured-post__read">Leer artículo</span>
+              </div>
+            </a>
+          </section>
+
+          <!-- Últimas publicaciones -->
+          <section aria-labelledby="latestTitle" style="margin-top: 2.5rem;">
+            <div class="section-header">
+              <h2 class="section-header__title" id="latestTitle">
+                <span class="section-header__line"></span>Últimas Publicaciones
+              </h2>
+              <a href="filosofia.html" class="section-header__link">Ver todas →</a>
+            </div>
+
+            <div class="posts-grid" role="list">
+
+              <a href="posts/que-es-la-etica.html" class="post-card animate-in" role="listitem"
+                 aria-label="Artículo: ¿Qué es la ética y para qué sirve?">
+                <div class="post-card__thumb" aria-hidden="true">⚖️</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--etica">Ética</span>
+                    <span class="post-card__date">10 may. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">¿Qué es la ética y para qué sirve?</h3>
+                  <p class="post-card__excerpt">
+                    Una introducción clara a la ética: qué es, cómo guía nuestras
+                    acciones y por qué la necesitamos en la vida cotidiana.
+                  </p>
+                </div>
+              </a>
+
+              <a href="posts/socrates-y-el-metodo-maieutico.html" class="post-card animate-in" role="listitem"
+                 aria-label="Artículo: Sócrates y el arte de hacer preguntas">
+                <div class="post-card__thumb" aria-hidden="true">🏛️</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--filosofia">Filosofía</span>
+                    <span class="post-card__date">5 may. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">Sócrates y el arte de hacer buenas preguntas</h3>
+                  <p class="post-card__excerpt">
+                    Aprende cómo Sócrates usaba las preguntas para descubrir la
+                    verdad. ¡Un método que tú también puedes usar hoy!
+                  </p>
+                </div>
+              </a>
+
+              <a href="posts/libre-albedrio.html" class="post-card animate-in" role="listitem"
+                 aria-label="Artículo: ¿Tenemos libre albedrío?">
+                <div class="post-card__thumb" aria-hidden="true">🔓</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--filosofia">Filosofía</span>
+                    <span class="post-card__date">28 abr. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">¿Tenemos libre albedrío o todo está determinado?</h3>
+                  <p class="post-card__excerpt">
+                    Uno de los debates más antiguos de la filosofía: ¿somos
+                    libres de elegir o nuestras decisiones ya están escritas?
+                  </p>
+                </div>
+              </a>
+
+              <a href="posts/etica-kantiana.html" class="post-card animate-in" role="listitem"
+                 aria-label="Artículo: La ética de Kant en 5 pasos">
+                <div class="post-card__thumb" aria-hidden="true">📐</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--etica">Ética</span>
+                    <span class="post-card__date">20 abr. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">La ética de Kant explicada en 5 pasos</h3>
+                  <p class="post-card__excerpt">
+                    El imperativo categórico de Kant puede sonar complicado,
+                    pero con ejemplos cotidianos ¡se entiende fácilmente!
+                  </p>
+                </div>
+              </a>
+
+              <a href="talleres.html" class="post-card animate-in" role="listitem"
+                 aria-label="Taller: Debate filosófico sobre tecnología">
+                <div class="post-card__thumb" aria-hidden="true">✏️</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--taller">Taller</span>
+                    <span class="post-card__date">15 abr. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">Taller: Debate filosófico sobre inteligencia artificial</h3>
+                  <p class="post-card__excerpt">
+                    Guía completa para organizar un debate filosófico en el aula
+                    sobre el impacto ético de la IA en nuestra sociedad.
+                  </p>
+                </div>
+              </a>
+
+              <a href="recursos.html" class="post-card animate-in" role="listitem"
+                 aria-label="Recursos para el ICFES">
+                <div class="post-card__thumb" aria-hidden="true">🎯</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta">
+                    <span class="tag tag--recursos">Recursos</span>
+                    <span class="post-card__date">8 abr. 2025</span>
+                  </div>
+                  <h3 class="post-card__title">Guía de filosofía para el ICFES Saber 11°</h3>
+                  <p class="post-card__excerpt">
+                    Resumen de los temas más frecuentes en la prueba de Lectura
+                    Crítica del ICFES con ejercicios de práctica.
+                  </p>
+                </div>
+              </a>
+
+            </div><!-- /posts-grid -->
+          </section>
+
+          <!-- Newsletter -->
+          <div class="newsletter" style="margin-top: 2.5rem;">
+            <div class="newsletter__icon">📬</div>
+            <h2 class="newsletter__title">¿Te gustó el contenido?</h2>
+            <p class="newsletter__desc">
+              Déjanos tu correo y te avisamos cuando publiquemos nuevos artículos,
+              talleres y recursos.
+            </p>
+            <form class="newsletter__form" id="newsletterForm" novalidate>
+              <input type="email" class="newsletter__input"
+                     placeholder="tu@correo.com" aria-label="Tu correo electrónico" required>
+              <button type="submit" class="newsletter__btn">Suscribirme</button>
+            </form>
+          </div>
+
+        </div><!-- /content column -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="sidebar" aria-label="Barra lateral">
+
+          <!-- Buscar -->
+          <div class="widget">
+            <h2 class="widget__title">🔍 Buscar</h2>
+            <form class="search-form" id="searchForm" role="search">
+              <input type="search" class="search-input" id="searchInput"
+                     placeholder="Buscar artículos…" aria-label="Buscar artículos">
+              <button type="submit" class="search-btn" aria-label="Buscar">→</button>
+            </form>
+          </div>
+
+          <!-- Categorías -->
+          <div class="widget">
+            <h2 class="widget__title">📂 Categorías</h2>
+            <ul class="cat-list" role="list">
+              <li><a href="etica.html"><span>⚖️ Ética</span><span class="cat-list__count">8</span></a></li>
+              <li><a href="filosofia.html"><span>🧠 Filosofía</span><span class="cat-list__count">12</span></a></li>
+              <li><a href="talleres.html"><span>✏️ Talleres</span><span class="cat-list__count">5</span></a></li>
+              <li><a href="recursos.html"><span>📚 Recursos</span><span class="cat-list__count">6</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Cita filosófica -->
+          <div class="widget quote-widget">
+            <h2 class="widget__title">✦ Cita del día</h2>
+            <p class="quote-text" id="quoteText">Solo sé que nada sé.</p>
+            <p class="quote-author" id="quoteAuthor">— Sócrates</p>
+            <button id="quoteBtn" style="
+              background: rgba(255,255,255,0.12);
+              color: rgba(255,255,255,0.75);
+              border: 1px solid rgba(255,255,255,0.2);
+              padding: 0.4rem 1rem;
+              border-radius: 4px;
+              font-family: var(--font-ui);
+              font-size: 0.72rem;
+              font-weight: 600;
+              letter-spacing: 0.06em;
+              text-transform: uppercase;
+              cursor: pointer;
+              margin-top: 0.85rem;
+              transition: all 0.2s;
+            " aria-label="Siguiente cita">Siguiente cita →</button>
+          </div>
+
+          <!-- Temas populares -->
+          <div class="widget">
+            <h2 class="widget__title">🏷️ Temas populares</h2>
+            <div class="tags-cloud">
+              <a href="etica.html"       class="tag-cloud__item">Ética</a>
+              <a href="filosofia.html"   class="tag-cloud__item">Sócrates</a>
+              <a href="filosofia.html"   class="tag-cloud__item">Platón</a>
+              <a href="etica.html"       class="tag-cloud__item">Kant</a>
+              <a href="filosofia.html"   class="tag-cloud__item">Libre albedrío</a>
+              <a href="talleres.html"    class="tag-cloud__item">Debates</a>
+              <a href="recursos.html"    class="tag-cloud__item">ICFES</a>
+              <a href="filosofia.html"   class="tag-cloud__item">Existencialismo</a>
+              <a href="etica.html"       class="tag-cloud__item">Justicia</a>
+              <a href="talleres.html"    class="tag-cloud__item">Dilemas</a>
+            </div>
+          </div>
+
+        </aside><!-- /sidebar -->
+
+      </div><!-- /main-layout -->
+    </div><!-- /container -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Filosofía <span>&</span> Locura</div>
+          <p class="footer__brand-desc">
+            Un espacio para pensar, cuestionar y crecer. Blog educativo de filosofía
+            y ética para jóvenes latinoamericanos.
+          </p>
+        </div>
+        <div>
+          <div class="footer__heading">Categorías</div>
+          <ul class="footer__links">
+            <li><a href="etica.html">⚖️ Ética</a></li>
+            <li><a href="filosofia.html">🧠 Filosofía</a></li>
+            <li><a href="talleres.html">✏️ Talleres</a></li>
+            <li><a href="recursos.html">📚 Recursos</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Acerca</div>
+          <ul class="footer__links">
+            <li><a href="acerca.html">Sobre el blog</a></li>
+            <li><a href="recursos.html#icfes">Prep. ICFES</a></li>
+            <li><a href="talleres.html">Actividades</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Filosofía y Locura · Hecho con 📖 y ☕</span>
+        <span>Diseñado para estudiantes colombianos</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backToTop" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

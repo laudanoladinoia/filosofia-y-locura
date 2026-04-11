@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artículos de ética para estudiantes de secundaria. Dilemas morales, teorías éticas y aplicaciones prácticas.">
+  <title>Ética | Filosofía y Locura</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+</head>
+<body>
+
+  <div class="topbar"><div class="container">Para estudiantes de <strong>grado 10° y 11°</strong> &nbsp;·&nbsp; Colombia</div></div>
+
+  <header class="masthead" role="banner">
+    <div class="masthead__inner container">
+      <a href="index.html" class="masthead__brand">
+        <span class="masthead__logo">Filosofía <span>&</span> Locura</span>
+        <span class="masthead__tagline">Blog de ética y pensamiento crítico</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__list" role="list">
+          <li><a href="index.html"     class="nav__link">Inicio</a></li>
+          <li><a href="etica.html"     class="nav__link active">Ética</a></li>
+          <li><a href="filosofia.html" class="nav__link">Filosofía</a></li>
+          <li><a href="talleres.html"  class="nav__link">Talleres</a></li>
+          <li><a href="recursos.html"  class="nav__link">Recursos</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <ul class="mobile-nav__list" role="list">
+        <li><a href="index.html"     class="mobile-nav__link">🏠 Inicio</a></li>
+        <li><a href="etica.html"     class="mobile-nav__link">⚖️ Ética</a></li>
+        <li><a href="filosofia.html" class="mobile-nav__link">🧠 Filosofía</a></li>
+        <li><a href="talleres.html"  class="mobile-nav__link">✏️ Talleres</a></li>
+        <li><a href="recursos.html"  class="mobile-nav__link">📚 Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CATEGORY BANNER -->
+  <div class="category-banner">
+    <div class="container">
+      <p class="category-banner__label">Categoría</p>
+      <h1 class="category-banner__title">⚖️ Ética</h1>
+      <p class="category-banner__desc">
+        Dilemas morales, teorías éticas y reflexiones sobre cómo debemos vivir.
+        Artículos para pensar en los grandes problemas del bien y el mal.
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="main-layout" style="padding-top:2rem;">
+
+        <div>
+          <!-- Filtros -->
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.75rem;" role="group" aria-label="Filtrar por subcategoría">
+            <button data-filter="all"      class="btn btn--primary" style="padding:0.4rem 1rem; font-size:0.75rem;">Todos</button>
+            <button data-filter="dilemas"  class="btn btn--outline" style="padding:0.4rem 1rem; font-size:0.75rem; color:var(--ink); border-color:var(--border);">Dilemas</button>
+            <button data-filter="teorias"  class="btn btn--outline" style="padding:0.4rem 1rem; font-size:0.75rem; color:var(--ink); border-color:var(--border);">Teorías</button>
+            <button data-filter="sociedad" class="btn btn--outline" style="padding:0.4rem 1rem; font-size:0.75rem; color:var(--ink); border-color:var(--border);">Sociedad</button>
+          </div>
+
+          <div class="posts-grid" role="list">
+
+            <a href="posts/el-dilema-del-prisionero.html" class="post-card" data-category="dilemas" role="listitem">
+              <div class="post-card__thumb">⚖️</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Dilemas</span>
+                  <span class="post-card__date">15 may. 2025</span>
+                </div>
+                <h2 class="post-card__title">El Dilema del Prisionero: ¿cooperar o traicionar?</h2>
+                <p class="post-card__excerpt">Un experimento que revela el conflicto entre interés individual y bien colectivo.</p>
+              </div>
+            </a>
+
+            <a href="posts/que-es-la-etica.html" class="post-card" data-category="teorias" role="listitem">
+              <div class="post-card__thumb">📜</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Teorías</span>
+                  <span class="post-card__date">10 may. 2025</span>
+                </div>
+                <h2 class="post-card__title">¿Qué es la ética y para qué sirve?</h2>
+                <p class="post-card__excerpt">Una introducción clara a la ética: conceptos básicos y su importancia en nuestra vida.</p>
+              </div>
+            </a>
+
+            <a href="posts/etica-kantiana.html" class="post-card" data-category="teorias" role="listitem">
+              <div class="post-card__thumb">📐</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Teorías</span>
+                  <span class="post-card__date">20 abr. 2025</span>
+                </div>
+                <h2 class="post-card__title">La ética de Kant en 5 pasos sencillos</h2>
+                <p class="post-card__excerpt">El imperativo categórico explicado con ejemplos de la vida cotidiana colombiana.</p>
+              </div>
+            </a>
+
+            <a href="#" class="post-card" data-category="sociedad" role="listitem">
+              <div class="post-card__thumb">🌎</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Sociedad</span>
+                  <span class="post-card__date">5 abr. 2025</span>
+                </div>
+                <h2 class="post-card__title">Ética y redes sociales: ¿todo vale en internet?</h2>
+                <p class="post-card__excerpt">Reflexiones sobre privacidad, desinformación y responsabilidad en el mundo digital.</p>
+              </div>
+            </a>
+
+            <a href="#" class="post-card" data-category="dilemas" role="listitem">
+              <div class="post-card__thumb">🚃</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Dilemas</span>
+                  <span class="post-card__date">28 mar. 2025</span>
+                </div>
+                <h2 class="post-card__title">El trolley problem: ¿sacrificarías una vida para salvar cinco?</h2>
+                <p class="post-card__excerpt">El dilema más famoso de la filosofía moral. ¿Qué harías tú?</p>
+              </div>
+            </a>
+
+            <a href="#" class="post-card" data-category="sociedad" role="listitem">
+              <div class="post-card__thumb">⚕️</div>
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <span class="tag tag--etica">Sociedad</span>
+                  <span class="post-card__date">15 mar. 2025</span>
+                </div>
+                <h2 class="post-card__title">Bioética: los límites de la ciencia</h2>
+                <p class="post-card__excerpt">¿Tiene límites la ciencia? Clonación, IA y manipulación genética bajo la lupa ética.</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <aside class="sidebar" aria-label="Barra lateral">
+          <div class="widget">
+            <h2 class="widget__title">📂 Categorías</h2>
+            <ul class="cat-list">
+              <li><a href="etica.html"><span>⚖️ Ética</span><span class="cat-list__count">8</span></a></li>
+              <li><a href="filosofia.html"><span>🧠 Filosofía</span><span class="cat-list__count">12</span></a></li>
+              <li><a href="talleres.html"><span>✏️ Talleres</span><span class="cat-list__count">5</span></a></li>
+              <li><a href="recursos.html"><span>📚 Recursos</span><span class="cat-list__count">6</span></a></li>
+            </ul>
+          </div>
+          <div class="widget quote-widget">
+            <h2 class="widget__title">✦ Cita del día</h2>
+            <p class="quote-text" id="quoteText">Solo sé que nada sé.</p>
+            <p class="quote-author" id="quoteAuthor">— Sócrates</p>
+            <button id="quoteBtn" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.2);padding:0.4rem 1rem;border-radius:4px;font-family:var(--font-ui);font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;margin-top:0.85rem;">Siguiente →</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Filosofía <span>&</span> Locura</div>
+          <p class="footer__brand-desc">Blog educativo de filosofía y ética para jóvenes latinoamericanos.</p>
+        </div>
+        <div>
+          <div class="footer__heading">Categorías</div>
+          <ul class="footer__links">
+            <li><a href="etica.html">⚖️ Ética</a></li>
+            <li><a href="filosofia.html">🧠 Filosofía</a></li>
+            <li><a href="talleres.html">✏️ Talleres</a></li>
+            <li><a href="recursos.html">📚 Recursos</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Acerca</div>
+          <ul class="footer__links">
+            <li><a href="acerca.html">Sobre el blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Filosofía y Locura</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backToTop" aria-label="Volver arriba">↑</button>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
