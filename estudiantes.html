@@ -186,23 +186,25 @@
               <button class="btn btn--outline" type="button" data-uni-filter="publica">Públicas</button>
               <button class="btn btn--outline" type="button" data-uni-filter="privada">Privadas</button>
             </div>
-            <div class="posts-grid" id="universitiesList" role="list">
-              <a href="https://unal.edu.co/" target="_blank" rel="noopener noreferrer" class="post-card" role="listitem">
-                <div class="post-card__thumb">🎓</div>
-                <div class="post-card__body">
-                  <div class="post-card__meta"><span class="tag tag--recursos">Pública</span><span class="post-card__date">Bogotá</span></div>
-                  <h3 class="post-card__title">Universidad Nacional de Colombia</h3>
-                  <p class="post-card__excerpt">Ir al sitio oficial para consultar programas, admisiones y becas.</p>
+            <div class="university-grid" id="universitiesList" role="list">
+              <article class="university-card" role="listitem">
+                <div class="university-card__top">
+                  <span class="university-card__icon" aria-hidden="true">🛡️</span>
+                  <span class="university-card__badge">Admisiones abiertas</span>
                 </div>
-              </a>
-              <a href="https://www.javeriana.edu.co/" target="_blank" rel="noopener noreferrer" class="post-card" role="listitem">
-                <div class="post-card__thumb">🎓</div>
-                <div class="post-card__body">
-                  <div class="post-card__meta"><span class="tag tag--recursos">Privada</span><span class="post-card__date">Bogotá</span></div>
-                  <h3 class="post-card__title">Pontificia Universidad Javeriana</h3>
-                  <p class="post-card__excerpt">Ir al sitio oficial para consultar programas, admisiones y becas.</p>
+                <p class="university-card__type">Pública</p>
+                <h3 class="university-card__name">Universidad Nacional de Colombia</h3>
+                <a href="https://unal.edu.co/" target="_blank" rel="noopener noreferrer" class="university-card__btn">Visitar sitio</a>
+              </article>
+              <article class="university-card" role="listitem">
+                <div class="university-card__top">
+                  <span class="university-card__icon" aria-hidden="true">🦉</span>
+                  <span class="university-card__badge">Admisiones abiertas</span>
                 </div>
-              </a>
+                <p class="university-card__type">Privada</p>
+                <h3 class="university-card__name">Pontificia Universidad Javeriana</h3>
+                <a href="https://www.javeriana.edu.co/" target="_blank" rel="noopener noreferrer" class="university-card__btn">Visitar sitio</a>
+              </article>
             </div>
           </section>
         </div>

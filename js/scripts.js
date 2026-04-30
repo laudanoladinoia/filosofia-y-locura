@@ -366,27 +366,25 @@ function initUniversityLinks() {
   if (!listEl) return;
 
   const universities = [
-    { nombre: 'Universidad Nacional de Colombia', tipo: 'publica', ciudad: 'Bogotá', url: 'https://unal.edu.co/' },
-    { nombre: 'Universidad de Antioquia', tipo: 'publica', ciudad: 'Medellín', url: 'https://www.udea.edu.co/' },
-    { nombre: 'Universidad del Valle', tipo: 'publica', ciudad: 'Cali', url: 'https://www.univalle.edu.co/' },
-    { nombre: 'Pontificia Universidad Javeriana', tipo: 'privada', ciudad: 'Bogotá', url: 'https://www.javeriana.edu.co/' },
-    { nombre: 'Universidad de los Andes', tipo: 'privada', ciudad: 'Bogotá', url: 'https://uniandes.edu.co/' },
-    { nombre: 'Universidad del Rosario', tipo: 'privada', ciudad: 'Bogotá', url: 'https://urosario.edu.co/' }
+    { nombre: 'Universidad Nacional de Colombia', tipo: 'publica', ciudad: 'Bogotá', url: 'https://unal.edu.co/', icono: '🛡️', admisiones: true },
+    { nombre: 'Universidad de Antioquia', tipo: 'publica', ciudad: 'Medellín', url: 'https://www.udea.edu.co/', icono: '🎓', admisiones: true },
+    { nombre: 'Universidad del Valle', tipo: 'publica', ciudad: 'Cali', url: 'https://www.univalle.edu.co/', icono: '🏛️', admisiones: false },
+    { nombre: 'Pontificia Universidad Javeriana', tipo: 'privada', ciudad: 'Bogotá', url: 'https://www.javeriana.edu.co/', icono: '🦉', admisiones: true },
+    { nombre: 'Universidad de los Andes', tipo: 'privada', ciudad: 'Bogotá', url: 'https://uniandes.edu.co/', icono: '⛰️', admisiones: false },
+    { nombre: 'Universidad del Rosario', tipo: 'privada', ciudad: 'Bogotá', url: 'https://urosario.edu.co/', icono: '📜', admisiones: true }
   ];
 
   const render = (items) => {
     listEl.innerHTML = items.map(u => `
-      <a href="${u.url}" target="_blank" rel="noopener noreferrer" class="post-card" role="listitem" aria-label="Abrir sitio de ${u.nombre}">
-        <div class="post-card__thumb">🎓</div>
-        <div class="post-card__body">
-          <div class="post-card__meta">
-            <span class="tag tag--recursos">${u.tipo === 'publica' ? 'Pública' : 'Privada'}</span>
-            <span class="post-card__date">${u.ciudad}</span>
-          </div>
-          <h3 class="post-card__title">${u.nombre}</h3>
-          <p class="post-card__excerpt">Ir al sitio oficial para consultar programas, admisiones y becas.</p>
+      <article class="university-card" role="listitem" aria-label="${u.nombre}">
+        <div class="university-card__top">
+          <span class="university-card__icon" aria-hidden="true">${u.icono || '🎓'}</span>
+          ${u.admisiones ? '<span class="university-card__badge">Admisiones abiertas</span>' : ''}
         </div>
-      </a>
+        <p class="university-card__type">${u.tipo === 'publica' ? 'Pública' : 'Privada'} · ${u.ciudad}</p>
+        <h3 class="university-card__name">${u.nombre}</h3>
+        <a href="${u.url}" target="_blank" rel="noopener noreferrer" class="university-card__btn">Visitar sitio</a>
+      </article>
     `).join('');
   };
 
