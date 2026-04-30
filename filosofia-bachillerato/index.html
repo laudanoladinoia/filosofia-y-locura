@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofía para Bachillerato | Grados 10° y 11°</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f7f1;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #ecf0f1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: white;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .intro h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .grade-section {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+
+        .grade-section.undecimo {
+            border-left-color: #e74c3c;
+        }
+
+        .grade-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .topic-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .topic-card h3 {
+            color: #3498db;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .undecimo .topic-card h3 {
+            color: #e74c3c;
+        }
+
+        .topic-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .topic-card ul {
+            list-style-position: inside;
+            color: #666;
+        }
+
+        .topic-card li {
+            margin-bottom: 0.3rem;
+        }
+
+        .resources {
+            background-color: #ecf0f1;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .resources h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .resource-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .resource-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FILOSOFÍA PARA BACHILLERATO</h1>
+        <p>"La vida no examinada no merece ser vivida" - Sócrates</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#grado-decimo">Grado 10°</a></li>
+            <li><a href="#grado-undecimo">Grado 11°</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="inicio">
+        <section class="intro">
+            <h2>Bienvenidos al Mundo de la Filosofía</h2>
+            <p>
+                Este espacio está diseñado especialmente para estudiantes de grados décimo y undécimo 
+                que desean explorar las grandes preguntas de la humanidad. Aquí encontrarás contenidos 
+                organizados por grado, temas fundamentales, pensadores clave y recursos para profundizar 
+                tu aprendizaje filosófico.
+            </p>
+        </section>
+
+        <section id="grado-decimo" class="grade-section">
+            <h2>📚 Grado Décimo - Fundamentos Filosóficos</h2>
+            <p>En este grado exploraremos los orígenes del pensamiento filosófico y las bases que sustentan 
+            la reflexión crítica sobre la realidad, el conocimiento y la existencia humana.</p>
+            
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3>Introducción a la Filosofía</h3>
+                    <p>¿Qué es la filosofía? Origen, etimología y características del pensamiento filosófico.</p>
+                    <ul>
+                        <li>El mito y la razón</li>
+                        <li>Características del pensamiento filosófico</li>
+                        <li>Disciplinas filosóficas básicas</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Filosofía Antigua</h3>
+                    <p>Los primeros filósofos griegos y sus preguntas fundamentales sobre la naturaleza.</p>
+                    <ul>
+                        <li>Presocráticos: Tales, Anaximandro, Heráclito</li>
+                        <li>Sócrates, Platón y Aristóteles</li>
+                        <li>Teoría de las Ideas y Lógica aristotélica</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Teoría del Conocimiento</h3>
+                    <p>Reflexión sobre cómo conocemos y qué podemos conocer realmente.</p>
+                    <ul>
+                        <li>Racionalismo vs Empirismo</li>
+                        <li>Verdad y certeza</li>
+                        <li>Límites del conocimiento humano</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Antropología Filosófica</h3>
+                    <p>Preguntas sobre la naturaleza humana y nuestra lugar en el mundo.</p>
+                    <ul>
+                        <li>¿Qué es el ser humano?</li>
+                        <li>Cuerpo y alma</li>
+                        <li>Libertad y determinismo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="grado-undecimo" class="grade-section undecimo">
+            <h2>🎓 Grado Undécimo - Filosofía Moderna y Contemporánea</h2>
+            <p>En este último año de bachillerato, profundizaremos en el pensamiento moderno y contemporáneo, 
+            analizando cómo la filosofía responde a los desafíos de la sociedad actual.</p>
+            
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3>Filosofía Medieval</h3>
+                    <p>La síntesis entre fe y razón en el pensamiento cristiano, islámico y judío.</p>
+                    <ul>
+                        <li>San Agustín y Santo Tomás</li>
+                        <li>Las cinco vías para demostrar la existencia de Dios</li>
+                        <li>Filosofía árabe: Avicena y Averroes</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Filosofía Moderna</h3>
+                    <p>El giro antropocéntrico y el nacimiento de la ciencia moderna.</p>
+                    <ul>
+                        <li>Descartes y el racionalismo</li>
+                        <li>Hume y el empirismo</li>
+                        <li>Kant y la Ilustración</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Filosofía Contemporánea</h3>
+                    <p>Crítica a la modernidad y nuevas perspectivas sobre la existencia humana.</p>
+                    <ul>
+                        <li>Marxismo y crítica social</li>
+                        <li>Existencialismo: Sartre, Camus</li>
+                        <li>Fenomenología y hermenéutica</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Ética y Política</h3>
+                    <p>Reflexión sobre la moral, la justicia y la organización social.</p>
+                    <ul>
+                        <li>Teorías éticas: utilitarismo, deontología</li>
+                        <li>Justicia social y derechos humanos</li>
+                        <li>Democracia y ciudadanía</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Filosofía Latinoamericana</h3>
+                    <p>Pensamiento propio desde nuestra realidad continental.</p>
+                    <ul>
+                        <li>Filosofía de la liberación</li>
+                        <li>Pensamiento indígena y afrodescendiente</li>
+                        <li>Identidad y mestizaje cultural</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources">
+            <h2>🔗 Recursos Complementarios</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <a href="#">Biblioteca Virtual de Filosofía</a>
+                    <p>Textos clásicos y contemporáneos</p>
+                </div>
+                <div class="resource-item">
+                    <a href="#">Videos Educativos</a>
+                    <p>Explicaciones animadas de conceptos</p>
+                </div>
+                <div class="resource-item">
+                    <a href="#">Foro de Discusión</a>
+                    <p>Espacio para debatir ideas</p>
+                </div>
+                <div class="resource-item">
+                    <a href="#">Guías de Estudio</a>
+                    <p>Material descargable por temas</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Filosofía para Bachillerato - Grados 10° y 11°</p>
+        <p>Desarrollado con pasión por el pensamiento crítico</p>
+        <p>"Pensar es el mayor don que tenemos como seres humanos"</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
