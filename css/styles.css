@@ -1172,7 +1172,7 @@ footer {
 
 /* ── Estilo juvenil: Ruta estudiantes ── */
 .hero--students {
-  background: radial-gradient(circle at 10% 20%, #35255b 0%, #1a1a2e 45%, #10101f 100%);
+  background: radial-gradient(circle at 10% 20%, #123b63 0%, #0f1f3d 50%, #0a1328 100%);
 }
 
 .student-badges {
@@ -1188,7 +1188,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #fff;
-  background: linear-gradient(135deg, rgba(230,126,34,0.9), rgba(192,57,43,0.9));
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.9), rgba(52, 152, 219, 0.9));
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
@@ -1201,19 +1201,19 @@ footer {
 }
 
 .students-grid .post-card__thumb {
-  background: linear-gradient(135deg, #6c3483, #c0392b);
+  background: linear-gradient(135deg, #16a085, #2980b9);
   color: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(108,52,131,0.25);
 }
 
 #guias-documentos .btn--outline {
-  border-color: rgba(108,52,131,0.35);
+  border-color: rgba(41,128,185,0.4);
 }
 
 #guias-documentos .btn--outline.active,
 #guias-documentos .btn--outline:hover {
-  background: linear-gradient(135deg, #6c3483, #c0392b);
+  background: linear-gradient(135deg, #16a085, #2980b9);
   color: #fff;
   border-color: transparent;
 }
