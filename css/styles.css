@@ -1217,3 +1217,14 @@ footer {
   color: #fff;
   border-color: transparent;
 }
+
+.hero--students .btn--universidades {
+  border-color: rgba(46, 204, 113, 0.9);
+  color: #fff;
+  background: rgba(46, 204, 113, 0.15);
+}
+
+.hero--students .btn--universidades:hover {
+  background: linear-gradient(135deg, #16a085, #2980b9);
+  border-color: transparent;
+}
