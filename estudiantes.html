@@ -52,6 +52,7 @@
       <div class="hero__actions">
         <a href="#plan-semanal" class="btn btn--primary">Ver plan semanal</a>
         <a href="talleres.html" class="btn btn--outline">Ir a talleres</a>
+        <a href="#links-universidades" class="btn btn--outline">Ver universidades</a>
       </div>
       <div class="student-badges" role="list" aria-label="Beneficios de la ruta">
         <span class="student-badge" role="listitem">🔥 Retos semanales</span>
@@ -168,6 +169,41 @@
               <button class="btn btn--outline" type="button" data-doc-filter="Checklist">Checklist</button>
             </div>
             <div class="posts-grid" id="studentDocsList" role="list" aria-live="polite"></div>
+            <p id="studentDocsEmpty" style="display:none;margin-top:0.8rem;color:var(--muted);font-family:var(--font-ui);">
+              No se encontraron documentos con esos filtros.
+            </p>
+          </section>
+
+          <section id="links-universidades" aria-labelledby="universidadesTitle" style="margin-top:2.5rem;display:block;">
+            <div class="section-header">
+              <h2 class="section-header__title" id="universidadesTitle"><span class="section-header__line"></span>Links de universidades</h2>
+            </div>
+            <p style="margin-bottom:1rem;color:var(--muted);font-family:var(--font-ui);">
+              Explora páginas oficiales para conocer programas de filosofía, admisiones y becas.
+            </p>
+            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <button class="btn btn--outline active" type="button" data-uni-filter="all">Todas</button>
+              <button class="btn btn--outline" type="button" data-uni-filter="publica">Públicas</button>
+              <button class="btn btn--outline" type="button" data-uni-filter="privada">Privadas</button>
+            </div>
+            <div class="posts-grid" id="universitiesList" role="list">
+              <a href="https://unal.edu.co/" target="_blank" rel="noopener noreferrer" class="post-card" role="listitem">
+                <div class="post-card__thumb">🎓</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta"><span class="tag tag--recursos">Pública</span><span class="post-card__date">Bogotá</span></div>
+                  <h3 class="post-card__title">Universidad Nacional de Colombia</h3>
+                  <p class="post-card__excerpt">Ir al sitio oficial para consultar programas, admisiones y becas.</p>
+                </div>
+              </a>
+              <a href="https://www.javeriana.edu.co/" target="_blank" rel="noopener noreferrer" class="post-card" role="listitem">
+                <div class="post-card__thumb">🎓</div>
+                <div class="post-card__body">
+                  <div class="post-card__meta"><span class="tag tag--recursos">Privada</span><span class="post-card__date">Bogotá</span></div>
+                  <h3 class="post-card__title">Pontificia Universidad Javeriana</h3>
+                  <p class="post-card__excerpt">Ir al sitio oficial para consultar programas, admisiones y becas.</p>
+                </div>
+              </a>
+            </div>
           </section>
         </div>
 
@@ -189,6 +225,7 @@
               <li><a href="filosofia.html">Guía base de Filosofía</a></li>
               <li><a href="talleres.html">Talleres por dificultad</a></li>
               <li><a href="recursos.html">Recursos imprimibles</a></li>
+              <li><a href="#links-universidades">Links de universidades</a></li>
             </ul>
           </div>
         </aside>
