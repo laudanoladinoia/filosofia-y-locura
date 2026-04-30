@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "📘",
+    "tipo": "Guía 10°",
+    "titulo": "Guía de argumentación filosófica",
+    "desc": "Plantilla base para construir tesis, razones y contraargumentos.",
+    "href": "docs/guia-argumentacion-10.txt"
+  },
+  {
+    "icon": "⚖️",
+    "tipo": "Guía 11°",
+    "titulo": "Guía para resolver dilemas éticos",
+    "desc": "Pasos para analizar casos con utilitarismo, deontología y virtud.",
+    "href": "docs/guia-dilemas-eticos-11.txt"
+  },
+  {
+    "icon": "✅",
+    "tipo": "Checklist",
+    "titulo": "Checklist express para Saber 11",
+    "desc": "Lista rápida de verificación para lectura crítica y filosofía.",
+    "href": "docs/checklist-saber11-filosofia.txt"
+  }
+]
