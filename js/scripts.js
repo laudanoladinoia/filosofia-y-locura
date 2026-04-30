@@ -376,7 +376,7 @@ function initUniversityLinks() {
 
   const render = (items) => {
     listEl.innerHTML = items.map(u => `
-      <article class="university-card" role="listitem" aria-label="${u.nombre}">
+      <article class="university-card" role="listitem" data-type="${u.tipo}" aria-label="${u.nombre}">
         <div class="university-card__top">
           <span class="university-card__icon" aria-hidden="true">${u.icono || '🎓'}</span>
           ${u.admisiones ? '<span class="university-card__badge">Admisiones abiertas</span>' : ''}
@@ -391,12 +391,20 @@ function initUniversityLinks() {
   render(universities);
 
   const buttons = document.querySelectorAll('[data-uni-filter]');
+  const applyFilter = (filter) => {
+    const cards = listEl.querySelectorAll('.university-card');
+    cards.forEach(card => {
+      const type = card.dataset.type || '';
+      card.style.display = (filter === 'all' || type === filter) ? '' : 'none';
+    });
+  };
+
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.uniFilter || 'all';
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      render(filter === 'all' ? universities : universities.filter(u => u.tipo === filter));
+      applyFilter(filter);
     });
   });
 }
