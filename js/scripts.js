@@ -258,6 +258,105 @@ function initTableOfContents() {
 }
 
 /* ─────────────────────────────────────────
+   11. Cargador de guías y documentos (estudiantes.html)
+───────────────────────────────────────── */
+function initStudentDocuments() {
+  const container = document.getElementById('studentDocsList');
+  const status = document.getElementById('studentDocsStatus');
+  const embeddedData = document.getElementById('studentDocsData');
+  const searchInput = document.getElementById('studentDocsSearch');
+  if (!container) return;
+  const fallbackDocs = [
+    { icon: '📘', tipo: 'Guía 10°', titulo: 'Guía de argumentación filosófica', desc: 'Plantilla base para construir tesis, razones y contraargumentos.', href: 'docs/guia-argumentacion-10.txt' },
+    { icon: '⚖️', tipo: 'Guía 11°', titulo: 'Guía para resolver dilemas éticos', desc: 'Pasos para analizar casos con utilitarismo, deontología y virtud.', href: 'docs/guia-dilemas-eticos-11.txt' },
+    { icon: '✅', tipo: 'Checklist', titulo: 'Checklist express para Saber 11', desc: 'Lista rápida de verificación para lectura crítica y filosofía.', href: 'docs/checklist-saber11-filosofia.txt' }
+  ];
+  let allDocs = [];
+  let currentType = 'all';
+  let currentQuery = '';
+
+  const render = (docs) => {
+    container.innerHTML = docs.map(doc => `
+      <a href="${doc.href}" class="post-card" role="listitem" download>
+        <div class="post-card__thumb">${doc.icon}</div>
+        <div class="post-card__body">
+          <div class="post-card__meta">
+            <span class="tag tag--recursos">${doc.tipo}</span>
+          </div>
+          <h3 class="post-card__title">${doc.titulo}</h3>
+          <p class="post-card__excerpt">${doc.desc}</p>
+        </div>
+      </a>
+    `).join('');
+    if (status) status.textContent = `${docs.length} documento(s) disponible(s).`;
+  };
+
+  const applyFilters = () => {
+    const source = allDocs.length ? allDocs : fallbackDocs;
+    const filteredByType = currentType === 'all'
+      ? source
+      : source.filter(doc => doc.tipo === currentType);
+
+    const q = currentQuery.trim().toLowerCase();
+    const filtered = q
+      ? filteredByType.filter(doc =>
+          (`${doc.titulo} ${doc.desc} ${doc.tipo}`).toLowerCase().includes(q)
+        )
+      : filteredByType;
+
+    render(filtered);
+  };
+
+  const filterButtons = document.querySelectorAll('[data-doc-filter]');
+  if (filterButtons.length) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentType = btn.dataset.docFilter || 'all';
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentQuery = searchInput.value || '';
+      applyFilters();
+    });
+  }
+
+  if (embeddedData?.textContent?.trim()) {
+    try {
+      const parsed = JSON.parse(embeddedData.textContent);
+      if (Array.isArray(parsed) && parsed.length) {
+        allDocs = parsed;
+        applyFilters();
+        return;
+      }
+    } catch (_) {
+      // Si falla el parseo, continúa con fetch/fallback sin bloquear.
+    }
+  }
+
+  fetch('data/student-docs.json')
+    .then(r => {
+      if (!r.ok) throw new Error('No se pudo cargar data/student-docs.json');
+      return r.json();
+    })
+    .then(data => {
+      const docs = Array.isArray(data) ? data : fallbackDocs;
+      allDocs = docs.length ? docs : fallbackDocs;
+      applyFilters();
+    })
+    .catch(() => {
+      allDocs = fallbackDocs;
+      applyFilters();
+      if (status) status.textContent = 'Mostrando documentos locales.';
+    });
+}
+
+/* ─────────────────────────────────────────
    Inicializar todo al cargar el DOM
 ───────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -271,4 +370,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletter();
   initCategoryFilter();
   initTableOfContents();
+  initStudentDocuments();
 });
